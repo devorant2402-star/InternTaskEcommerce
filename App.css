@@ -1,0 +1,99 @@
+/* src/App.css
+   App-level styles: modal, small utilities, buttons used by SignIn modal
+*/
+
+/* -- Overlay & modal -- */
+.signin-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.48);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 220;
+  padding: 20px;
+}
+
+.signin-card {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 12px;
+  padding: 18px;
+  background: #ffffff;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.24);
+  transform-origin: center;
+  animation: modalPop .16s ease;
+}
+
+@keyframes modalPop {
+  from { transform: translateY(8px) scale(.995); opacity: 0 }
+  to   { transform: translateY(0) scale(1); opacity: 1 }
+}
+
+.signin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.btn-icon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 6px;
+}
+
+/* Form */
+.form-label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(15,23,42,0.08);
+  box-sizing: border-box;
+}
+
+/* Actions row in modal */
+.signin-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+/* Buttons (small set used by modal) */
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  border: none;
+}
+.btn-primary {
+  background: linear-gradient(90deg,#5f76ff,#ff66a6);
+  color: #fff;
+  box-shadow: 0 12px 36px rgba(95,118,255,0.12);
+}
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(15,23,42,0.06);
+  color: #0f1724;
+}
+
+/* small utility to help debug overflow (optional) */
+.app-root *:focus { outline-color: rgba(79,103,255,0.14); }
+
+/* responsive tweaks */
+@media (max-width: 480px) {
+  .signin-card { padding: 14px; }
+  .signin-header h3 { font-size: 16px; margin: 0; }
+}

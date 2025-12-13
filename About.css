@@ -1,0 +1,138 @@
+/* About.css – About Us page, matching Home / auth theme */
+
+.about-main {
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+/* big rounded card like your auth layouts */
+.about-card {
+  display: grid;
+  grid-template-columns: minmax(0,1.1fr) minmax(0,1fr);
+  border-radius: 24px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 28px 80px rgba(15,23,42,0.18);
+}
+
+/* left gradient section */
+.about-left {
+  padding: 28px 28px 26px;
+  background: linear-gradient(135deg,#5f76ff,#ff66a6);
+  color: #fff;
+}
+
+.about-badge {
+  display:inline-block;
+  background:rgba(255,255,255,0.18);
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+.about-title {
+  margin:0 0 10px;
+  font-size:30px;
+  line-height:1.15;
+  font-weight:800;
+}
+
+.about-lead {
+  margin:0 0 14px;
+  font-size:14px;
+  opacity:.96;
+}
+
+.about-highlights {
+  margin:0 0 16px;
+  padding-left:20px;
+  font-size:14px;
+}
+.about-highlights li + li {
+  margin-top:4px;
+}
+
+.about-cta-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:18px;
+}
+
+.about-numbers {
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+}
+
+.about-num {
+  display:block;
+  font-size:20px;
+  font-weight:800;
+}
+.about-label {
+  display:block;
+  font-size:12px;
+  opacity:.9;
+}
+
+/* right white section */
+.about-right {
+  padding:26px 26px 22px;
+  background:#fff;
+}
+
+.about-right h2 {
+  margin-top:0;
+  margin-bottom:10px;
+}
+
+.about-values-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin-top:16px;
+  margin-bottom:16px;
+}
+
+.about-value-card {
+  padding:12px 12px 10px;
+  border-radius:12px;
+  background:#f9fafb;
+  box-shadow:0 10px 24px rgba(15,23,42,0.04);
+}
+
+.about-value-card h3 {
+  margin:0 0 6px;
+  font-size:15px;
+}
+
+.about-footer-note {
+  font-size:13px;
+  color:var(--muted);
+  border-top:1px solid rgba(15,23,42,0.08);
+  padding-top:10px;
+}
+
+/* highlight About nav item */
+.about-pill {
+  background:rgba(255,255,255,0.26);
+}
+
+/* responsive */
+@media (max-width: 960px) {
+  .about-card {
+    grid-template-columns:1fr;
+  }
+  .about-values-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .about-values-grid {
+    grid-template-columns:1fr;
+  }
+}
